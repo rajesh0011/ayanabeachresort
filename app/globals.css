@@ -1,0 +1,94 @@
+@import "tailwindcss";
+@import "swiper/css";
+@import "swiper/css/navigation";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--foreground);
+  color: var(--0a0a0a);
+  font-family: var(--font-georgia);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+ font-family: var(--font-georgia);
+} 
+
+p, span, button, a{
+ font-family: var(--font-georgia);
+}
+
+
+.content-center-custom{
+  justify-content: center;
+}
+
+.swiper-button-next{
+    color: #fff !important;
+    width: 12px !important;
+    margin-right: 10px;
+}
+
+.swiper-button-prev{
+    width: 12px !important;
+    margin-left: 10px !important;
+    color: #fff !important;
+}
+
+.image-back{
+    background-color: #e6e2dc;
+    width: calc(100% + 2pc);
+    height: 460px;
+    position: relative;
+    top: 75px;
+    left: 2pc;
+}
+
+.facilities-images{
+    height: 85% !important;
+    width: 90% !important;
+    margin: auto !important;
+    left: auto !important;
+}
+
+.booking-engine-section{
+    position: absolute;
+    width: calc(100% - 20px);
+    top: auto;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hero-text{
+    font-size: 2.3rem;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 0 0 #000;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
