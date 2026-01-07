@@ -37,7 +37,7 @@ export default function RoomSlider() {
 
     <>
     
-        <section className="py-12">
+        <section className="py-12 bg-light bg-white">
       <div className="container mx-auto px-5">
         {/* Section Heading */}
         <div className="text-center max-w-4xl mx-auto mb-10">
