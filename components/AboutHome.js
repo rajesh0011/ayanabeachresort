@@ -17,7 +17,7 @@ export default function AboutSection() {
           </h2>
 
           <p className="text-lg text-[#3d3d3d] leading-relaxed mb-6 font-cormorant">
-            Located near the iconic Maha Ganpati Temple and just a short stroll from the main beach, Ayana Beach Resort offers comfortable stays with easy access to one of Goa’s liveliest coastal stretches. Enjoy serene beach vibes, proximity to popular attractions and essential amenities designed for a refreshing holiday experience.
+            Located at Main beach  just a short stroll from Maha Ganpati Temple and Mahabaleshwar temple (Atmalinga), offers comfortable stays with easy access to one of Goa’s liveliest coastal stretches. Enjoy serene beach vibes, proximity to popular attractions and essential amenities designed for a refreshing holiday experience.
           </p>
 
           

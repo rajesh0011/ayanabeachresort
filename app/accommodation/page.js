@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation } from "swiper/modules";
+import { Pagination, Navigation, Autoplay } from "swiper/modules";
 
 import { Ruler, Users, Bed, X } from "lucide-react";
 import { Coffee, Bath, Wind, Monitor, Phone, Wifi, BedDouble } from "lucide-react";
@@ -18,12 +18,20 @@ import Footer from "@/components/Footer";
 
 
 const rooms = [
-  {
-    id: 1,
+    {  id: 1,
     title: "Deluxe Room",
     description:
       "The Deluxe Room offers a comfortable double bedroom designed for a relaxed stay near the beach. The room features a private balcony where guests can enjoy fresh air and peaceful moments. With essential in-room amenities and an attached bathroom with shower, this room is ideal for couples or solo travellers looking for a calm and convenient stay.",
-    images: ["/img/r1.webp", "/img/r2.webp", "/img/r3.webp", "/img/r4.webp", "/img/r5.webp", "/img/r6.webp", "/img/r7.webp", "/img/r8.webp", "/img/r9.webp", "/img/r10.webp", "/img/r11.webp", "/img/r12.webp"],
+    // images: ["/img/r1.webp", "/img/r2.webp", "/img/r3.webp", "/img/r4.webp", "/img/r5.webp", "/img/r6.webp"],
+     images: ["/img/r1.png", "/img/r2.png", "/img/r3.png", "/img/r4.png", "/img/r5.png", "/img/r6.png"],
+  },
+  {
+    id: 2,
+    title: "Premium Room",
+    description:
+      "The Premium Room offers an elegant and comfortable double bedroom, thoughtfully designed for a refined beachside retreat. The room features a private balcony, providing a serene space to enjoy fresh coastal air and peaceful moments throughout the day. With stylish furnishings, modern comforts, and carefully selected amenities, it is an ideal choice for guests seeking relaxation and a touch of luxury after exploring the beach or nearby attractions.",
+    // images: ["/img/r7.webp", "/img/r8.webp", "/img/r9.webp", "/img/r10.webp", "/img/r11.webp", "/img/r12.webp"],
+     images: ["/img/r7.png", "/img/r8.png", "/img/r9.png", "/img/r10.png", "/img/r11.png", "/img/r12.png"],
   },
 ];
 
@@ -66,25 +74,31 @@ export default function HotelRooms() {
             {/* Outer Card Slider */}
             <Swiper
               modules={[Pagination, Navigation]}
-              slidesPerView={1}
+              slidesPerView={2}
               spaceBetween={30}
               navigation={false}
-              className="pb-12 w-full max-w-[420px]"
+              className="pb-12 w-full"
             >
               {rooms.map((room, index) => (
                 <SwiperSlide key={index} className="flex justify-center">
-                  <div className="bg-white shadow-md overflow-hidden max-w-[380px] w-full">
+                  <div className="bg-white shadow-md overflow-hidden w-full">
 
                     {/* Inner Image Slider */}
                     <div className="relative">
                       <Swiper
-                        modules={[Pagination]}
+                        modules={[Pagination, Autoplay]}
                         pagination={{ clickable: true }}
-                        className="h-[260px]"
+                        autoplay={{
+                            delay: 3000,        // 3 seconds
+                            disableOnInteraction: false,
+                            pauseOnMouseEnter: true,
+                        }}
+                        loop
+                        className="h-[300px]"
                       >
                         {room.images.map((img, i) => (
                           <SwiperSlide key={i}>
-                            <div className="relative h-[260px] w-full">
+                            <div className="relative h-[300px] w-full">
                               <Image
                                 src={img}
                                 alt={room.title}
@@ -98,7 +112,7 @@ export default function HotelRooms() {
                     </div>
 
                     {/* Content */}
-                    <div className="p-6">
+                    <div className="p-6 text-center">
                       <h3 className="text-2xl font-serif font-semibold mb-3">
                         {room.title}
                       </h3>
@@ -122,7 +136,7 @@ export default function HotelRooms() {
 
 
                       {/* Buttons */}
-                      <div className="flex gap-4">
+                      <div className="flex gap-4 justify-center items-center">
                         <button onClick={() => handleOpenModal(room)} className="border border-[#18394a] text-[#18394a] px-6 py-2 text-sm hover:bg-[#18394a] hover:text-white transition">
                           More info
                         </button>
@@ -146,7 +160,7 @@ export default function HotelRooms() {
       {/* Modal Popup */}
       {openModal && selectedRoom && (
         <div className="fixed inset-0 bg-black/50 backdrop-blur-[2px] flex justify-center items-center z-150 px-4">
-          <div className="bg-white shadow-xl max-w-xl w-full overflow-hidden relative">
+          <div className="bg-white shadow-xl max-w-xl w-full overflow-visible relative">
 
             {/* Close Button */}
             <button

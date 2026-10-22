@@ -19,12 +19,20 @@ const restaurants = [
     direction: "left",
   },
   {
+    id: 6,
+    title: "Murdeshwar Temple",
+    description:
+      "Located close to Ayana Beach Resort, the Murdeshwar Temple is a well-known spiritual site visited by guests seeking peaceful moments and blessings. The temple is easy to reach and can be comfortably visited during your stay. Its calm surroundings and spiritual ambiance provide a relaxing pause from beach activities and local sightseeing.",
+    image: "/img/murdeshwar.png",
+    direction: "right",
+  },
+  {
     id: 2,
-    title: "Main Beach",
+    title: "Om Beach",
     description:
       "Just a short walk from the resort, the Main Beach is perfect for relaxed walks, enjoying sea views, and watching the sunset. Guests can spend easy mornings by the shore or unwind in the evening with the sound of the waves nearby.",
     image: "/img/e-gokarna-beach.jpg",
-    direction: "right",
+    direction: "left",
   },
   {
     id: 3,
@@ -32,7 +40,7 @@ const restaurants = [
     description:
       "Located around 20 minutes from the resort, Kudle Beach is known for its calm setting and wide shoreline. It is a good spot for quiet beach time, light walks, and enjoying the natural coastal surroundings away from crowds.",
     image: "/img/e-kuldle-beach.jpg",
-    direction: "left",
+    direction: "right",
   },
   {
     id: 4,
@@ -40,7 +48,7 @@ const restaurants = [
     description:
       "About 45 km from Ayana Beach Resort, the Yana Caves offer a scenic day trip for guests who enjoy nature and exploration. Surrounded by greenery and rock formations, the area provides a refreshing change of pace during your stay.",
     image: "/img/e-yana-caves.webp",
-    direction: "right",
+    direction: "left",
   },
 ];
 

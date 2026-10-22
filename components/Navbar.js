@@ -41,7 +41,7 @@ export default function Navbar() {
 
         <div className="flex flex-col items-center gap-4">
           <Image
-            src="/logo-new.png"
+            src="/logo.png"
             alt="Logo"
             width={80}
             height={45}
@@ -51,7 +51,7 @@ export default function Navbar() {
          <ul className="space-y-5 text-white text-center mt-10">
           <li><Link href="/">Overview</Link></li>
           <li><Link href="/accommodation">Rooms</Link></li>
-          <li><Link href="/restaurant">Dining</Link></li>
+          {/* <li><Link href="/restaurant">Dining</Link></li> */}
           {/* <li><Link href="/events">Events</Link></li> */}
           <li><Link href="/offers">Offers</Link></li>
           <li><Link href="/gallery">Gallery</Link></li>
@@ -67,7 +67,7 @@ export default function Navbar() {
           scroll ? "bg-[#18394a] shadow-lg py-4" : "bg-transparent py-6"
         )}
       >
-        <div className="container mx-auto flex items-center justify-between">
+        <div className="container mx-auto flex items-center justify-between md:justify-center gap-0 md:gap-5">
           
           {/* Left Section */}
           <div className="flex items-center gap-4">
@@ -111,7 +111,21 @@ export default function Navbar() {
               </span>
             </Link>
 
-             <Link
+            <Link
+              href="/offers"
+              className={clsx(
+                "flex items-center gap-2 px-4 py-2 transition",
+                scroll
+                  ? " text-white"
+                  : " text-white"
+              )}
+            >
+              <span className="hidden text-[18px] sm:block">
+                Offers
+              </span>
+            </Link>
+
+             {/* <Link
               href="/restaurant"
               className={clsx(
                 "flex items-center gap-2 px-4 py-2 transition",
@@ -123,7 +137,7 @@ export default function Navbar() {
               <span className="hidden text-[18px] sm:block">
                 Dining
               </span>
-            </Link>
+            </Link> */}
 
                         {/* <Link
               href="events"
@@ -140,10 +154,10 @@ export default function Navbar() {
           </div>
 
           {/* Center Logo */}
-          <div className="absolute left-1/2 -translate-x-1/2 top-2">
+          <div className="absolute md:relative left-1/2 md:left-0 -translate-x-1/2 md:-translate-x-0">
           <Link href="/">
             <Image
-              src="/logo-new.png"
+              src="/logo.png"
               alt="Logo"
               width={80}
               height={60}
@@ -156,7 +170,7 @@ export default function Navbar() {
             />
 
             <Image
-              src="/logo-new.png"
+              src="/logo.png"
               alt="Logo"
               width={55}
               height={55}
@@ -172,17 +186,7 @@ export default function Navbar() {
 
           {/* Right Section */}
           <div className="flex items-center gap-4">            
-             <Link
-              href="/offers"
-              className={clsx(
-                "flex items-center gap-2 px-4 py-2 transition",
-                scroll
-                  ? "text-white"
-                  : " text-white"
-              )}
-            >
-              <span className="hidden text-[18px] sm:block">Offers</span>
-            </Link>
+            
 
             <Link
               href="/gallery"

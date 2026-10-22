@@ -69,7 +69,8 @@ export default function ContactSection() {
                         Sales Office 
                     </h4>
                      <p className="text-[#e6804c] leading-loose  font-bold">
-                       76763 83658
+                       {/* 76763 83658 */}
+                       76765 51766
                      </p>
 
                    
@@ -84,7 +85,7 @@ export default function ContactSection() {
                     Email Address
                     </h4>
                     <p className="text-[#e6804c]  font-bold">
-                    ayanabeachresort@gmail.com
+                    ayanabystarling@gmail.com
                     </p>
                 </div>
                 </motion.div>

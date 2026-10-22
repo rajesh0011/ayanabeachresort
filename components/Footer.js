@@ -14,7 +14,7 @@ export default function Footer() {
         {/* Logo */}
         <div className="flex justify-center mb-8">
           <Image
-            src="/logo-new.png" // replace with your logo path
+            src="/logo.png" // replace with your logo path
             alt="bluepineresort"
             width={220}
             height={120}
@@ -25,7 +25,7 @@ export default function Footer() {
         <nav className="flex flex-wrap justify-center gap-x-12 text-lg font-serif mb-10">
           <Link href="/" className="hover:underline italic font-bold">Home</Link>
           <Link href="/" className="hover:underline italic font-bold">About Us</Link>
-          <Link href="/" className="hover:underline italic font-bold">Contact Us</Link>
+          <Link href="/contact-us" className="hover:underline italic font-bold">Contact Us</Link>
           <Link href="/" className="hover:underline italic font-bold">
             Terms & Conditions
           </Link>
@@ -41,13 +41,15 @@ export default function Footer() {
 
         {/* Contact */}
         <p className="italic mb-2 font-bold">
-          Booking Office : <span className="not-italic">76763 83658</span>
+          {/* Booking Office : <span className="not-italic">76763 83658</span> */}
+          Booking Office : <span className="not-italic">76765 51766</span>
+          
            <br />
           <a
             href="#"
             className="hover:underline"
           >
-             ayanabeachresort@gmail.com
+            ayanabystarling@gmail.com
           </a>
         </p>
 
